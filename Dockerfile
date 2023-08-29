@@ -1,7 +1,7 @@
 # Используем базовый образ Python
 #FROM python:3.11
 FROM nginx
-RUN apt-get update && apt-get install -y python3 python3-pip supervisor
+RUN apt-get update && apt-get install -y python3 python3-pip supervisor procps
 # Устанавливаем переменную окружения для отключения режима буферизации вывода
 ENV PYTHONUNBUFFERED 1
 
