@@ -14,7 +14,7 @@ RUN pip3 install -r requirements.txt --break-system-packages
 
 RUN python3 manage.py migrate
 RUN python3 manage.py collectstatic --noinput
-RUN gunicorn -c gunicorn_config.py django_project.wsgi:application
+RUN gunicorn -c gunicorn_config.py -d django_project.wsgi:application
 # Устанавливаем Nginx
 #RUN apt-get update && apt-get install -y nginx nano
 
