@@ -17,6 +17,7 @@ RUN python3 manage.py collectstatic --noinput
 
 # Копируем конфигурационный файл supervisord
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Запускаем supervisord, который будет запускать и Gunicorn, и Nginx
 CMD ["supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
