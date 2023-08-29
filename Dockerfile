@@ -8,7 +8,7 @@ ENV PYTHONUNBUFFERED 1
 RUN apt-get update && apt-get install -y nginx nano
 
 #№ Копируем конфигурационный файл Nginx в контейнер
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+##COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Создаем и переходим в рабочую директорию /app
 WORKDIR /app
