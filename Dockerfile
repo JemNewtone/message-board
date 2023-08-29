@@ -25,7 +25,7 @@ COPY . /app/
 
 # Копируем зависимости проекта и устанавливаем их
 #COPY requirements.txt /app/
-#RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt --break-system-packages
 
 # Копируем файлы проекта в рабочую директорию
 #COPY . /app/
