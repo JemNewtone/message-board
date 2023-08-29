@@ -5,10 +5,10 @@ FROM python:3.11
 ENV PYTHONUNBUFFERED 1
 
 # Устанавливаем Nginx
-##RUN apt-get update && apt-get install -y nginx
+RUN apt-get update && apt-get install -y nginx nano
 
 # Копируем конфигурационный файл Nginx в контейнер
-##COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Создаем и переходим в рабочую директорию /app
 WORKDIR /app
