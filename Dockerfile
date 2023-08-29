@@ -9,11 +9,11 @@ WORKDIR /app
 
 COPY . /app/
 
-RUN pip3 install -r requirements.txt
+#RUN pip3 install -r requirements.txt
 
 
-RUN python3 manage.py migrate
-RUN python3 manage.py collectstatic --noinput
+#RUN python3 manage.py migrate
+#RUN python3 manage.py collectstatic --noinput
 # Устанавливаем Nginx
 #RUN apt-get update && apt-get install -y nginx nano
 
@@ -36,7 +36,7 @@ RUN python3 manage.py collectstatic --noinput
 
 # Устанавливаем и настраиваем Gunicorn
 #COPY gunicorn_config.py /app/
-CMD ["gunicorn", "-c", "gunicorn_config.py", "django_project.wsgi:application"]
+#CMD ["gunicorn", "-c", "gunicorn_config.py", "django_project.wsgi:application"]
 
 # Открываем порты для Nginx и Gunicorn
 EXPOSE 80
